@@ -50,13 +50,14 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* [UC5](#uc5): Przekazanie produktu Kupującemu
+* [UC5](#uc5): Przekazanie produktu
 
 
 [Kupujący](#ac2)
 * [UC2](#uc2): Zaoferowanie kwoty za produkt wyższej od aktualnie najwyższej oferty
-* [UC3](#uc3),[UC6]([#uc6]): Finalizacja aukcji
+* [UC3](#uc3) Finalizacja aukcji
 * [UC4](#uc4): Przekazanie należności Sprzedającemu
+* [UC5](#uc5) Przekazanie produktu
 
 ---
 <a id="uc1"></a>
@@ -106,7 +107,9 @@ Osoba chcąca zakupić produkt na aukcji.
 
 **Scenariusz główny:**
 1. System informuje o zakończeniu aukcji
-2. System informuje o zwycięstwie [Kupującego](#ac2)
+2. System informuje o zwycięstwie [Kupującego](#ac2), z najwyższą kwotą
+3. System informuje o przegranej pozostałych [Kupujących]
+4. System informuje [Sprzedającego]
 
 ---
 
@@ -118,7 +121,7 @@ Osoba chcąca zakupić produkt na aukcji.
 
 **Scenariusz główny:**
 1. System informuje o konieczności zapłaty
-2. [Kupujący](#ac2) wybiera metodę płatności i używa jej
+2. [Kupujący](#ac2) wybiera [metodę płatności](#bo4) i używa jej
 3. System przekazuje pieniądze do [Sprzedającego](#ac1)
 
 **Scenariusze alternatywne:** 
@@ -138,23 +141,14 @@ Osoba chcąca zakupić produkt na aukcji.
 
 **Scenariusz główny:**
 1. System informuje o konieczności przekazania produktu
-2. [Kupujący](#ac2) wybiera metodę dostarczenia
-3. System informuje [Sprzedającego](#ac1) jakiej metody dostarczenia użyć
+2. [Kupujący](#ac2) wybiera metodę dostawy i podaje swoje [dane dostawy](#bo3)
+3. System informuje [Sprzedającego](#ac1) jakiej metody dostawy użyć
 
 **Scenariusze alternatywne:** 
 
 1.A. Metoda dostarczenia jest niedostępna
 * 2.A.1. System informuje o niedostępnej metodzie dostarczenia
 * 2.A.2 Przejdź do kroku 2
-
----
-<a id="uc6"></a>
-### UC6: Finalizacja aukcji[Kupującemu](#ac2)
-
-**Aktorzy:**  [Kupujący](#ac2), [Sprzedający](#ac1)
-
-**Scenariusz główny:**
-1. System informuje [Kupującego](#ac2) o przegraniu licytacji
 
 ---
 ## Obiekty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
@@ -166,6 +160,18 @@ Aukcja jest formą zawierania transakcji kupna-sprzedaży, w której Sprzedając
 ### BO2: Produkt
 
 Fizyczny lub cyfrowy obiekt, który ma zostać sprzedany w ramach aukcji.
+
+<a id="bo3"></a>
+
+### BO3: Dane dostawy
+
+Adres zamieszkania, na który ma zostać dostarczony przedmiot
+
+<a id="bo4"></a>
+
+### BO4: Metody płatności
+
+Metoda płatności jest sposobem przekazania środków płatniczych między Kupującym, a Sprzedawcą, czyli
 
 ## Reguły biznesowe
 
