@@ -176,15 +176,32 @@ Metoda płatności jest sposobem przekazania środków płatniczych między Kupu
 ## Reguły biznesowe
 
 <a id="br1"></a>
+
 ### BR1: Złożenie oferty
 
 Złożenie oferty wymaga zaproponowania kwoty wyższej niż aktualnie oferowana o minimum 1,00 PLN.
 
 
 <a id="br2"></a>
+
 ### BR2: Rozstrzygnięcie aukcji
 
 Aukcję wygrywa ten z [Kupujący](#ac2)ch, który w momencie jej zakończenia (upłynięcia czasu) złożył najwyższą ofertę.
+
+<a id="br3"></a>
+
+### BR3: Branie udziału
+Branie udziału w aukcji wymaga posiadania konta w systemie
+
+<a id="br4"></a>
+
+### BR4: Płatność
+Płatność musi zostać wykonana w ciągu 7 dni od zakończenia licytacji
+
+### BR5: Dostawa
+Produkt musi zostać wysłany w ciągu 7 dni od finalizacji zapłaty
+
+
 
 ## Macierz CRUDL
 
