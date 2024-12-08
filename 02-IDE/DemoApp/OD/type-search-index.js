@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"pl.poznan.put.cs.io.DemoApp.DemoLib","l":"DemoService"},{"p":"JavadocDemoPackage","l":"JavadocClassExample"},{"p":"pl.poznan.put.cs.io.DemoApp.main","l":"Main"}];updateSearchResults();
